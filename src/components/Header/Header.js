@@ -43,30 +43,20 @@ class Header extends React.Component {
         aria-label="Fifth navbar example"
       >
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          <button className="btn btn-disabled snipcart-checkout">
+            <Shop fill="#ffa900" size="30" />
+          </button>
+          <a className="navbar-brand text-warning" href="/">
             Little Mart
           </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarsExample05"
-            aria-controls="navbarsExample05"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
 
           <div className="collapse navbar-collapse" id="navbarsExample05">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <Link className="fw-bold" to="/">
-                {" "}
                 <li className="btn text-warning fw-bold">Home </li>
               </Link>
 
               <Link className="fw-bold" to="/shop">
-                {" "}
                 <li className="btn text-warning fw-bold">Shop</li>{" "}
               </Link>
 
@@ -84,10 +74,8 @@ class Header extends React.Component {
             </ul>
             <div className="snipcart-summary">
               <button className="btn btn-disabled snipcart-checkout">
-                {" "}
                 <Cart fill="#ffa900" size="30" />
               </button>
-
               <strong className="badge bg-warning text-dark">
                 {this.state.items}
               </strong>
